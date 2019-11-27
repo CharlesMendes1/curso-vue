@@ -1,0 +1,32 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <!-- v-bind é para fazer a ligaçao entre body e vue -->
+
+    <div id="app">
+        <p>{{ titulo }}</p>
+        <p>{{ saudacao() }}</p>
+        <a v-bind:href="link">Google</a>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+               titulo: 'Usando VueJS 2!',
+               link: 'http://google.com.br'
+            },
+            methods: {
+                saudacao: function(){
+                    return this.titulo
+                }
+            }
+        })
+    </script>
+</body>
+</html>

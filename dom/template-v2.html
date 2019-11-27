@@ -1,0 +1,32 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <!-- com vue da para acessar o objeto diretamente -->
+    <!-- tudo que é retornado no vue tem que ser resolvido e retornado com string -->
+
+    <div id="app">
+        <p>{{ titulo }}</p>
+        <p>{{ saudacao() }}</p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+               titulo: 'Usando VueJS 2!' 
+            },
+            methods: {
+                saudacao: function(){
+                    return 'Boa semana!'
+                    // return Math.pow(2, 3);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
