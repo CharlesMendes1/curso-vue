@@ -8,13 +8,19 @@
 </head>
 <body>
     <div id="app">
-        <p>{{ titulo }}</p>
+        <input  @keyup.enter.alt='alertaEnter' type="text">
     </div>
     <script>
         new Vue({
             el: '#app',
             data: {
-               titulo: 'Usando VueJS 2!' 
+
+            },
+            methods: {
+                alertaEnter(){
+                    alert('Voce apertou a tecla ENTER e a tecla ALT');    
+                }
+
             }
         });
     </script>
